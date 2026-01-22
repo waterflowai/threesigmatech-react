@@ -1,0 +1,71 @@
+.splash-container {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #faf3e4;
+  color: #231f20; 
+  font-family: 'Arial', sans-serif; 
+  
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 2rem 3rem; 
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-text {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.content-row {
+  flex: 1; 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  padding: 0 3rem; 
+  box-sizing: border-box;
+}
+
+.slogan-side {
+  flex: 1; 
+  max-width: 600px; 
+}
+
+.slogan-side h1 {
+  font-size: 4rem; 
+  line-height: 1.1; 
+  font-weight: 800; 
+  margin: 0;
+}
+
+.symbol-side {
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.big-symbol {
+  font-size: 12rem; 
+  font-weight: bold;
+  color: #1a1a1a;
+  transform: rotate(-15deg); 
+}
+
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  .slogan-side h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+}
