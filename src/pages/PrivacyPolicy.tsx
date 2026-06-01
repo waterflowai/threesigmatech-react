@@ -110,17 +110,6 @@ export default function PrivacyPolicy() {
               <strong>5.1 To delete your account and data:</strong> Go to{" "}
               <Link to="/dumpster/delete_account">Delete Account</Link>.
             </li>
-            <li>
-              <strong>5.2 Questions or Concerns?</strong> You can contact us
-              directly via{" "}
-              <a
-                href="mailto:joel.wasserman8@gmail.com"
-                className="privacy-link"
-              >
-                email
-              </a>
-              .
-            </li>
           </ol>
         </section>
       </main>
