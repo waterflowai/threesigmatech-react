@@ -1,25 +1,18 @@
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
+import Splash from './pages/Splash';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 function App() {
   return (
-    <div className="splash-container">
-      <header className="header">
-        <span className="logo-text">ThreeSigmaTech</span>
-      </header>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Splash />} />
 
-      <main className="content-row">
-        <div className="slogan-side">
-          <h1>
-            Little by little,<br />
-            we make the world better.
-          </h1>
-        </div>
+        <Route path="/dumpster/privacy" element={<PrivacyPolicy />} />
 
-        <div className="symbol-side">
-          <span className="big-symbol">3&Sigma;</span>
-        </div>
-      </main>
-    </div>
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </Router>
   );
 }
 
