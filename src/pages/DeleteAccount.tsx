@@ -21,11 +21,11 @@ const handleSubmit = async (e: FormEvent) => {
     setStatus("loading");
 
     try {
-      const response = await fetch(`${baseUrl}/delete`, {
-        method: "POST",
+      const response = await fetch(`${baseUrl}/user`, {
+        method: "DELETE",
         headers: {
           "Content-Type": "application/json",
-          "X-API-Key": apiKey,
+          "x-api-key": apiKey,
         },
         body: JSON.stringify({ email, password }),
       });
@@ -76,14 +76,14 @@ const handleSubmit = async (e: FormEvent) => {
           >
             <h2>🎉 Account Permanently Deleted</h2>
             <p>
-              Your Dumpster profile, credentials, and all historic game metric
-              scoring history have been instantly scrubbed from our systems.
+              Your Dumpster profile, credentials, and all game metric
+              scoring history have been deleted from our systems.
             </p>
-            <p style={{ marginTop: "2rem" }}>
+            {/* <p style={{ marginTop: "2rem" }}>
               <Link to="/" className="delete-return-link">
                 Return to Home Page
               </Link>
-            </p>
+            </p> */}
           </div>
         ) : (
           <div className="delete-card">
